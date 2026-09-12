@@ -1,16 +1,16 @@
 const PRODUCTS = [
- {id:"hoodie", name:"Ocotillo Tennis Pullover Hoodie", img:"assets/hoodie.jpg", color:"Navy", hex:"#1d2b4a", fit:"Unisex", sizes:["XS","S","M","L","XL","2XL","3XL"], youth:true, personalize:true, tag:"Best seller",
+ {id:"hoodie", name:"Ocotillo Tennis Pullover Hoodie", img:"assets/hoodie.jpg?v=2", color:"Navy", hex:"#1d2b4a", fit:"Unisex", sizes:["XS","S","M","L","XL","2XL","3XL"], youth:true, personalize:true, tag:"Best seller",
   blurb:"Midweight fleece with the Village wordmark printed center chest. The one players pull on for early-morning clinics and cool-down after evening matches.",
   bullets:["Soft 8 oz cotton-blend fleece","Kangaroo pocket, flat drawcords","Adult and youth sizing","Optional player name on the back"]},
- {id:"crew", name:"Village Crewneck Sweatshirt", img:"assets/crew.jpg", color:"Heather Grey", hex:"#b8b8b8", fit:"Unisex", sizes:["XS","S","M","L","XL","2XL","3XL"], youth:true, personalize:true,
+ {id:"crew", name:"Village Crewneck Sweatshirt", img:"assets/crew.jpg?v=2", color:"Heather Grey", hex:"#b8b8b8", fit:"Unisex", sizes:["XS","S","M","L","XL","2XL","3XL"], youth:true, personalize:true,
   blurb:"Classic crew with the full Village lockup in navy. Layers over a polo on cold court mornings.", bullets:["Ribbed cuffs and hem","Pre-shrunk, holds its shape","Adult and youth sizing"]},
- {id:"qzip", name:"Ocotillo Performance Quarter-Zip", img:"assets/qzip.jpg", color:"Navy", hex:"#1d2b4a", fit:"Men's & Ladies'", sizes:["XS","S","M","L","XL","2XL","3XL"], youth:false, personalize:true, tag:"Coach favorite",
+ {id:"qzip", name:"Ocotillo Performance Quarter-Zip", img:"assets/qzip.jpg?v=2", color:"Navy", hex:"#1d2b4a", fit:"Men's & Ladies'", sizes:["XS","S","M","L","XL","2XL","3XL"], youth:false, personalize:true, tag:"Coach favorite",
   blurb:"Smooth-face stretch pullover with the Village mark embroidered on the left chest. The polished warm-up piece for pros, coaches, and league captains.", bullets:["Moisture-wicking stretch fabric","Embroidered, not printed","Men's and ladies' cuts","Optional name or title on the right chest"]},
- {id:"polo", name:"Ocotillo Court Polo", img:"assets/polo.jpg", color:"White", hex:"#ffffff", fit:"Men's & Ladies'", sizes:["XS","S","M","L","XL","2XL","3XL"], youth:false, personalize:false,
+ {id:"polo", name:"Ocotillo Court Polo", img:"assets/polo.jpg?v=2", color:"White", hex:"#ffffff", fit:"Men's & Ladies'", sizes:["XS","S","M","L","XL","2XL","3XL"], youth:false, personalize:false,
   blurb:"Lightweight performance polo with the Village mark embroidered on the left chest. Court-ready, and clean enough for the clubhouse after.", bullets:["Snag-resistant performance knit","UPF sun protection","Men's and ladies' cuts"]},
- {id:"cap", name:"Village Structured Cap", img:"assets/cap.jpg", color:"Navy", hex:"#1d2b4a", fit:"One size", sizes:["One size"], youth:false, personalize:false,
+ {id:"cap", name:"Village Structured Cap", img:"assets/cap.jpg?v=2", color:"Navy", hex:"#1d2b4a", fit:"One size", sizes:["One size"], youth:false, personalize:false,
   blurb:"Structured six-panel cap with a curved brim and the Village wordmark embroidered up front.", bullets:["Embroidered front","Adjustable closure","Sun-ready for Chandler courts"]},
- {id:"tee", name:"Ocotillo Performance Tee", img:"assets/tee.jpg", color:"Heather Grey", hex:"#b8b8b8", fit:"Adult & Youth", sizes:["XS","S","M","L","XL","2XL","3XL"], youth:true, personalize:true,
+ {id:"tee", name:"Ocotillo Performance Tee", img:"assets/tee.jpg?v=2", color:"Heather Grey", hex:"#b8b8b8", fit:"Adult & Youth", sizes:["XS","S","M","L","XL","2XL","3XL"], youth:true, personalize:true,
   blurb:"Lightweight tri-blend tee with the Village lockup center chest. Built for match days and junior clinics alike.", bullets:["Breathable, quick-dry blend","Retail fit, tagless","Adult and youth sizing","Optional player name on the back"]},
 ];
 const YOUTH = ["YS","YM","YL","YXL"];

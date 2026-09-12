@@ -6,7 +6,7 @@ header img{height:56px}
 nav{display:flex;gap:28px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}nav a.active{border-bottom:3px solid #2a5e99;padding-bottom:6px}
 .icons{display:flex;gap:18px;font-size:14px;font-weight:600;align-items:center}
 .cartbtn{background:#2a5e99;color:#fff;border-radius:20px;padding:8px 16px;cursor:pointer}
-.hero{position:relative;height:520px;background:url(assets/hero.jpg) center/cover;color:#fff}
+.hero{position:relative;height:520px;background:url(assets/hero.jpg?v=2) center/cover;color:#fff}
 .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(17,35,55,.88),rgba(17,35,55,.55) 55%,rgba(17,35,55,.15))}
 .hero .in{position:relative;padding:74px 4vw;max-width:1440px}
 .kick{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:#f8f0e9}
