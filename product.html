@@ -1,0 +1,31 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Product · Ocotillo Tennis Team Store</title><link rel="stylesheet" href="store.css"></head><body>
+<div class="wrap"><div class="crumb"><a href="index.html">Store</a> › <a href="index.html#shop">The Court Collection</a> › <span id="bc"></span></div>
+<div class="pd"><div class="big"><img id="img" alt=""></div><div>
+<div class="lock">Ocotillo Tennis · Round 1</div><h1 id="name"></h1><div class="sub" id="fit"></div>
+<div class="lab">Color</div><div class="opts" id="color"></div>
+<div class="lab">Size <span id="chart" style="font-weight:500;text-transform:none;letter-spacing:0;margin-left:8px;color:#2a5e99;cursor:pointer">Size guide</span></div><div class="opts" id="sizes"></div>
+<div id="persblock"><div class="lab">Personalization <span style="font-weight:500;text-transform:none;letter-spacing:0;color:#5e5e64">(optional)</span></div><div class="pers"><input id="pname" maxlength="14" placeholder="PLAYER NAME"><small>Printed or embroidered on the back, matching the team lettering. Up to 14 characters.</small></div></div>
+<div class="lab">Quantity</div><div class="qty"><button id="minus">−</button><span id="q">1</span><button id="plus">+</button></div>
+<button class="btn dark" id="add">Add to cart</button>
+<div class="note">Sizes and names are locked when Round 1 closes on October 10. Everything in the round is produced together and shipped to each buyer's address. Exchanges handled by Creative Alternatives, not the pro shop.</div>
+<div class="desc"><p id="blurb"></p><ul id="bul"></ul></div>
+</div></div>
+<div class="rel"><h3>Complete the kit</h3><div class="grid" id="rel"></div></div></div>
+<div class="toast" id="toast"></div>
+<script src="store.js"></script><script>
+shell('shop');
+const id=new URLSearchParams(location.search).get("id")||"hoodie"; const p=PRODUCTS.find(x=>x.id===id)||PRODUCTS[0];
+document.title=p.name+" · Ocotillo Tennis Team Store";
+$("#bc").textContent=p.name; $("#img").src=p.img; $("#name").textContent=p.name; $("#fit").textContent=`${p.color} · ${p.fit}`; $("#blurb").textContent=p.blurb; $("#bul").innerHTML=p.bullets.map(b=>`<li>${b}</li>`).join("");
+$("#color").innerHTML=`<button class="on"><span class="col"><i style="background:${p.hex}"></i>${p.color}</span></button>`;
+let size=null, qty=1; const sizes=p.youth?[...YOUTH,...p.sizes]:p.sizes;
+$("#sizes").innerHTML=sizes.map(s=>`<button data-s="${s}">${s}</button>`).join("");
+$("#sizes").querySelectorAll("button").forEach(b=>b.onclick=()=>{size=b.dataset.s; $("#sizes").querySelectorAll("button").forEach(x=>x.classList.toggle("on",x===b));});
+if(sizes.length===1){ size=sizes[0]; $("#sizes button").classList.add("on"); }
+if(!p.personalize) $("#persblock").remove();
+$("#minus").onclick=()=>{qty=Math.max(1,qty-1);$("#q").textContent=qty}; $("#plus").onclick=()=>{qty++;$("#q").textContent=qty};
+$("#add").onclick=()=>{ if(!size){ toast("Pick a size first"); return; } const pn=$("#pname")?$("#pname").value.trim().toUpperCase():""; cart.add({id:p.id,name:p.name,img:p.img,color:p.color,size,qty,name_on:pn}); };
+$("#chart").onclick=()=>toast("Youth YS–YXL · Adult XS–3XL · true-to-size retail fit");
+function toast(m){ const t=$("#toast"); t.textContent=m; t.classList.add("on"); setTimeout(()=>t.classList.remove("on"),2200); }
+$("#rel").innerHTML=PRODUCTS.filter(x=>x.id!==p.id).slice(0,3).map(card).join("");
+</script></body></html>
