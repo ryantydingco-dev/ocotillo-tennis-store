@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Checkout · Ocotillo Tennis Team Store</title><link rel="stylesheet" href="store.css"></head><body>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Checkout · Ocotillo Tennis Team Store</title><link rel="stylesheet" href="store.css?v=7"></head><body>
 <div class="wrap"><div class="co"><div class="box"><span class="pill">Secure checkout</span><h2>Ship to</h2><form id="f" class="f">
 <div><label>First name</label><input placeholder="Josh"></div><div><label>Last name</label><input placeholder="Bates"></div>
 <div class="full"><label>Email (order updates)</label><input type="email" placeholder="you@email.com"></div>
@@ -8,7 +8,7 @@
 <div class="full" style="margin-top:8px"><label>Payment</label><input disabled value="Card · Apple Pay · Google Pay (live at launch)"></div>
 <div class="full"><button class="btn dark" style="width:100%;padding:16px" type="submit">Place order</button></div></form></div>
 <div class="box"><h2>Order summary</h2><div id="sum"></div><div class="note" style="margin-top:16px">Pricing, tax, and shipping are shown here on the live store. This preview shows the flow.</div></div></div></div>
-<script src="store.js"></script><script>
+<script src="store.js?v=7"></script><script>
 shell('cart');
 const c=cart.get(); $("#sum").innerHTML = c.length? c.map(x=>`<div class="line"><img src="${x.img}"><div class="t"><b>${x.name}</b><small>${x.color} · ${x.size} · Qty ${x.qty}${x.name_on?` · Name: ${x.name_on}`:""}</small></div></div>`).join("") : `<div class="empty">Your cart is empty. <a href="index.html#shop" style="color:#2a5e99;font-weight:700">Back to the store</a></div>`;
 $("#f").onsubmit=e=>{e.preventDefault(); cart.clear(); location.href="confirm.html";};

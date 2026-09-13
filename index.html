@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ocotillo Tennis Team Store · Village Health Clubs & Spas</title><link rel="stylesheet" href="store.css"></head><body>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ocotillo Tennis Team Store · Village Health Clubs & Spas</title><link rel="stylesheet" href="store.css?v=7"></head><body>
 <section class="hero"><div class="in"><div class="kick">Ocotillo Village · Tennis Program</div><h1>Ocotillo Tennis<br>Team Store</h1>
 <p>Official Village gear for Ocotillo players, juniors, coaches, and families. Pick your pieces, add a player name, and it ships straight to your door.</p>
 <a class="btn" href="#shop">Shop the collection</a></div><img class="wm" src="assets/logo-white.png" alt=""></section>
@@ -15,7 +15,7 @@
 <p>The club shop carries a great everyday line. This store is different: it is built for the tennis program only, with the pieces players actually wear on court and to the clubhouse. Visors, racerbacks, and performance shorts for match day, quarter-zips and polos for pros and league captains, hoodies for juniors, and a player name on the back so every kid feels like part of the team.</p>
 <p>Rounds reopen for each season: fall leagues, spring juniors, summer camps. Same link, fresh gear, and the program earns on every order.</p></div><img src="assets/hero2.jpg" alt="Ocotillo tennis"></div></section>
 <div class="toast" id="toast"></div>
-<script src="store.js"></script><script>
+<script src="store.js?v=7"></script><script>
 shell('shop');
 function match(p,f){ if(f==="all") return true; if(f==="youth") return p.youth; if(f==="headwear") return p.id==="visor"; if(f==="personalize") return p.personalize; if(f==="adult") return p.id!=="visor"; return true; }
 function draw(f){ document.getElementById("grid").innerHTML = PRODUCTS.filter(p=>match(p,f)).map(card).join(""); document.querySelectorAll("#filt button").forEach(b=>b.classList.toggle("on",b.dataset.f===f)); }
