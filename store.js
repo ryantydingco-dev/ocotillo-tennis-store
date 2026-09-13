@@ -6,7 +6,7 @@ const PRODUCTS = [
   blurb:"Smooth-face stretch pullover with the Village mark embroidered on the left chest. The polished warm-up piece for pros, coaches, and league captains.", bullets:["Moisture-wicking stretch fabric","Embroidered, not printed","Men's and ladies' cuts","Optional name or title on the right chest"]},
  {id:"tank", name:"Ladies' Court Racerback Tank", img:"assets/tank.jpg?v=4", color:"White", hex:"#ffffff", fit:"Ladies'", sizes:["XS","S","M","L","XL","2XL"], youth:true, personalize:true, tag:"New",
   blurb:"Lightweight racerback with the Village lockup center chest. Made for Chandler match days, morning clinics, and everything after.", bullets:["Quick-dry performance knit","Racerback for full swing range","Ladies' and girls' sizing","Optional player name on the back"]},
- {id:"shorts", name:"Ocotillo Performance Shorts", img:"assets/shorts.jpg?v=4", color:"Navy", hex:"#1d2b4a", fit:"Men's & Boys'", sizes:["XS","S","M","L","XL","2XL"], youth:true, personalize:false,
+ {id:"shorts", name:"Ocotillo Performance Shorts", img:"assets/shorts.jpg?v=5", color:"Navy", hex:"#1d2b4a", fit:"Men's & Boys'", sizes:["XS","S","M","L","XL","2XL"], youth:true, personalize:false,
   blurb:"7-inch stretch woven short with zip pockets that hold a ball or a phone, and the Village mark on the left leg.", bullets:["Four-way stretch, quick-dry","Zip side pockets","Men's and boys' sizing"]},
  {id:"polo", name:"Ocotillo Court Polo", img:"assets/polo.jpg?v=4", color:"White", hex:"#ffffff", fit:"Men's & Ladies'", sizes:["XS","S","M","L","XL","2XL","3XL"], youth:false, personalize:false,
   blurb:"Lightweight performance polo with the Village mark embroidered on the left chest. Court-ready, and clean enough for the clubhouse after.", bullets:["Snag-resistant performance knit","UPF sun protection","Men's and ladies' cuts"]},
@@ -29,7 +29,7 @@ function shell(active){
   document.body.insertAdjacentHTML("afterbegin", `
   <div class="top">Ocotillo Tennis Team Store · Round 1 closes <b>October 10</b> · Ships to your door in about two weeks</div>
   <header><a href="index.html"><img src="assets/logo-navy.png" alt="Village Health Clubs & Spas"></a>
-   <nav><a href="index.html#shop" class="${active==='shop'?'active':''}">Shop All</a><a href="index.html#shop" data-f="adult">Adult</a><a href="index.html#shop" data-f="youth">Youth</a><a href="index.html#shop" data-f="headwear">Headwear</a><a href="index.html#how">How it works</a></nav>
+   <nav><a href="index.html#shop" class="${active==='shop'?'active':''}">Shop All</a><a href="index.html#shop" data-f="adult">Adult</a><a href="index.html#shop" data-f="youth">Youth</a><a href="index.html#shop" data-f="headwear">Accessories</a><a href="index.html#how">How it works</a></nav>
    <div class="icons"><span>Ocotillo Village · Chandler</span><span class="cartbtn" id="cartbtn">Cart (0)</span></div></header>
   <div class="ov" id="ov"></div>
   <aside class="drawer" id="drawer"><h3>Your cart <b id="close">×</b></h3><div class="lines" id="lines"></div>
