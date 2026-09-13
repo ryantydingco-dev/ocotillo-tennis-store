@@ -3,7 +3,7 @@
 <p>Official Village gear for Ocotillo players, juniors, coaches, and families. Pick your pieces, add a player name, and it ships straight to your door.</p>
 <a class="btn" href="#shop">Shop the collection</a></div><img class="wm" src="assets/logo-white.png" alt=""></section>
 <div class="bar"><span>No minimums, no sizes to collect</span><span>Player-name personalization</span><span>Adult and youth sizing</span><span>Every order supports the Ocotillo tennis program</span></div>
-<div class="wrap" id="shop"><div class="sect"><h2>The Court Collection</h2><div class="filt" id="filt"><button class="on" data-f="all">All</button><button data-f="adult">Adult</button><button data-f="youth">Youth</button><button data-f="headwear">Headwear</button><button data-f="personalize">Personalizable</button></div></div>
+<div class="wrap" id="shop"><div class="sect"><h2>The Court Collection</h2><div class="filt" id="filt"><button class="on" data-f="all">All</button><button data-f="adult">Adult</button><button data-f="youth">Youth</button><button data-f="headwear">Court accessories</button><button data-f="personalize">Personalizable</button></div></div>
 <div class="grid" id="grid"></div></div>
 <section class="how" id="how"><div class="wrap"><h2>How the team store works</h2><div class="steps">
 <div class="step"><b>1</b><h4>Josh shares one link</h4><p>Email it, text it, post it on the court board. That is the whole job for the program.</p></div>
@@ -12,12 +12,12 @@
 <div class="step"><b>4</b><h4>Ships to each buyer</h4><p>Individually packed and shipped to the home address. Nothing lands on the pro shop counter.</p></div>
 </div></div></section>
 <section class="why"><div class="wrap"><div><div class="kick">Why a program store</div><h2>Gear that says Ocotillo Tennis, not just gym.</h2>
-<p>The club shop carries a great everyday line. This store is different: it is built for the tennis program only, with the pieces players actually wear on court and to the clubhouse. Quarter-zips and polos for pros and league captains, hoodies and tees for juniors, and a player name on the back so every kid feels like part of the team.</p>
+<p>The club shop carries a great everyday line. This store is different: it is built for the tennis program only, with the pieces players actually wear on court and to the clubhouse. Visors, racerbacks, and performance shorts for match day, quarter-zips and polos for pros and league captains, hoodies for juniors, and a player name on the back so every kid feels like part of the team.</p>
 <p>Rounds reopen for each season: fall leagues, spring juniors, summer camps. Same link, fresh gear, and the program earns on every order.</p></div><img src="assets/hero2.jpg" alt="Ocotillo tennis"></div></section>
 <div class="toast" id="toast"></div>
 <script src="store.js"></script><script>
 shell('shop');
-function match(p,f){ if(f==="all") return true; if(f==="youth") return p.youth; if(f==="headwear") return p.id==="cap"; if(f==="personalize") return p.personalize; if(f==="adult") return p.id!=="cap"; return true; }
+function match(p,f){ if(f==="all") return true; if(f==="youth") return p.youth; if(f==="headwear") return p.id==="visor"||p.id==="towel"; if(f==="personalize") return p.personalize; if(f==="adult") return !["visor","towel"].includes(p.id); return true; }
 function draw(f){ document.getElementById("grid").innerHTML = PRODUCTS.filter(p=>match(p,f)).map(card).join(""); document.querySelectorAll("#filt button").forEach(b=>b.classList.toggle("on",b.dataset.f===f)); }
 document.querySelectorAll("#filt button").forEach(b=>b.onclick=()=>draw(b.dataset.f));
 document.querySelectorAll("nav a[data-f]").forEach(a=>a.onclick=()=>draw(a.dataset.f));
